@@ -1,7 +1,7 @@
 ## Testimonial slider 
 ---
 
-[Demo link](https://fahaddevs.github.io/filter-item-with-vanilla-js/)
+[Demo link](https://fahaddevs.github.io/testimonial-slider-with-vanilla-js/)
 
 
 ##### If you're interested this project, Please contribute and hit the star button.
