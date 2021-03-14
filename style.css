@@ -1,0 +1,25 @@
+body {
+  padding: 50px;
+}
+.card {
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 1px rgba(0,0,0,0.15);
+  position: relative;
+  text-align: center;
+}
+.card img {
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+  margin: 0 auto;
+}
+.prev-btn,
+.next-btn {
+  width: 40px;
+  height: 40px;
+  background-color: tomato;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+}
