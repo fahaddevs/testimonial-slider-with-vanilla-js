@@ -1,79 +1,32 @@
-
-const reviews = [
-  // {
-  //   id: 1,
-  //   name: 'Saira', 
-  //   job: 'Web developer',
-  //   img: 'images/1.png',
-  //   text: 'Nisi voluptatum molestias dignissimos? Neque sit dolor dolores cupiditate voluptatem veritatis eveniet, aut labore, aliquam excepturi minus dolorum fugit. Rerum, distinctio non.'
-  // },
-  // {
-  //   id: 2,
-  //   name: 'fahad', 
-  //   job: 'Frontend developer',
-  //   img: 'images/2.png',
-  //   text: 'Gnissimos? Neque sit dolor dolores cupiditate voluptatem veritatis eveniet, aut labore, aliquam excepturi minus dolorum fugit. Rerum, distinctio non.'
-  // },
-  // {
-  //   id: 3,
-  //   name: 'Smith', 
-  //   job: 'Web developer',
-  //   img: 'images/3.png',
-  //   text: 'Luptatum molestias dignissimos? Neque sit dolor dolores cupiditate voluptatem veritatis eveniet, aut labore, aliquam excepturi minus dolorum fugit. Rerum, distinctio non.'
-  // },
-  // {
-  //   id: 4,
-  //   name: 'Djajaj', 
-  //   job: 'Web developer',
-  //   img: 'images/4.png',
-  //   text: 'Dignissimos? Neque sit dolor dolores cupiditate voluptatem veritatis eveniet, aut labore, aliquam excepturi minus dolorum fugit. Rerum, distinctio non.'
-  // }
-]
-
-
-// select items 
-
-const img = document.getElementById('img');
-const author = document.getElementById('author');
-const job = document.getElementById('job');
-const info = document.getElementById('info');
-
+const newNode =  document.querySelectorAll('.card')
+const sliderWrapper = document.querySelector('.slider-wrapper');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 
-// set starting item 
-let currentItem = 0;
+let showFirst = 0
 
-// load initial item 
 window.addEventListener('DOMContentLoaded', function(){
-  showPerson(currentItem);
+  showPerson(showFirst)
 });
 
-function showPerson (person){
-  const cardNode = document.querySelectorAll('.card')
-  const 
-  cardNode.forEach(element => {    
-      img.src = item.img;
-      author.textContent = item.name;
-      job.textContent = item.job;
-      info.textContent = item.text;
-  });
+function showPerson (person) {
+  sliderWrapper.insertAdjacentElement('afterbegin', newNode[Math.abs(person)])
 }
 
-// show next person 
 nextBtn.addEventListener('click', function(){
-  currentItem++;
-  if (currentItem > reviews.length -1) {
-    currentItem = 0;
+  if (showFirst > newNode.length - 2) {
+    showFirst = 0;
+  } else {
+    showFirst++
   }
-  showPerson(currentItem);
+  showPerson(showFirst)
 });
 
-// show prev person 
 prevBtn.addEventListener('click', function(){
-  currentItem--;
-  if (currentItem < 0) {
-    currentItem = reviews.length -1;
+  if (showFirst === 0) {
+    showFirst = newNode.length -1;
+  } else {
+    showFirst--
   }
-  showPerson(currentItem);
+  showPerson(showFirst)
 });
