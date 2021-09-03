@@ -1,36 +1,38 @@
+
 const reviews = [
-  {
-    id: 1,
-    name: 'Saira', 
-    job: 'Web developer',
-    img: 'images/1.png',
-    text: 'Nisi voluptatum molestias dignissimos? Neque sit dolor dolores cupiditate voluptatem veritatis eveniet, aut labore, aliquam excepturi minus dolorum fugit. Rerum, distinctio non.'
-  },
-  {
-    id: 2,
-    name: 'fahad', 
-    job: 'Frontend developer',
-    img: 'images/2.png',
-    text: 'Gnissimos? Neque sit dolor dolores cupiditate voluptatem veritatis eveniet, aut labore, aliquam excepturi minus dolorum fugit. Rerum, distinctio non.'
-  },
-  {
-    id: 3,
-    name: 'Smith', 
-    job: 'Web developer',
-    img: 'images/3.png',
-    text: 'Luptatum molestias dignissimos? Neque sit dolor dolores cupiditate voluptatem veritatis eveniet, aut labore, aliquam excepturi minus dolorum fugit. Rerum, distinctio non.'
-  },
-  {
-    id: 4,
-    name: 'Djajaj', 
-    job: 'Web developer',
-    img: 'images/4.png',
-    text: 'Dignissimos? Neque sit dolor dolores cupiditate voluptatem veritatis eveniet, aut labore, aliquam excepturi minus dolorum fugit. Rerum, distinctio non.'
-  }
+  // {
+  //   id: 1,
+  //   name: 'Saira', 
+  //   job: 'Web developer',
+  //   img: 'images/1.png',
+  //   text: 'Nisi voluptatum molestias dignissimos? Neque sit dolor dolores cupiditate voluptatem veritatis eveniet, aut labore, aliquam excepturi minus dolorum fugit. Rerum, distinctio non.'
+  // },
+  // {
+  //   id: 2,
+  //   name: 'fahad', 
+  //   job: 'Frontend developer',
+  //   img: 'images/2.png',
+  //   text: 'Gnissimos? Neque sit dolor dolores cupiditate voluptatem veritatis eveniet, aut labore, aliquam excepturi minus dolorum fugit. Rerum, distinctio non.'
+  // },
+  // {
+  //   id: 3,
+  //   name: 'Smith', 
+  //   job: 'Web developer',
+  //   img: 'images/3.png',
+  //   text: 'Luptatum molestias dignissimos? Neque sit dolor dolores cupiditate voluptatem veritatis eveniet, aut labore, aliquam excepturi minus dolorum fugit. Rerum, distinctio non.'
+  // },
+  // {
+  //   id: 4,
+  //   name: 'Djajaj', 
+  //   job: 'Web developer',
+  //   img: 'images/4.png',
+  //   text: 'Dignissimos? Neque sit dolor dolores cupiditate voluptatem veritatis eveniet, aut labore, aliquam excepturi minus dolorum fugit. Rerum, distinctio non.'
+  // }
 ]
 
 
 // select items 
+
 const img = document.getElementById('img');
 const author = document.getElementById('author');
 const job = document.getElementById('job');
@@ -48,11 +50,14 @@ window.addEventListener('DOMContentLoaded', function(){
 });
 
 function showPerson (person){
-  const item = reviews[person];
-  img.src = item.img;
-  author.textContent = item.name;
-  job.textContent = item.job;
-  info.textContent = item.text;
+  const cardNode = document.querySelectorAll('.card')
+  const 
+  cardNode.forEach(element => {    
+      img.src = item.img;
+      author.textContent = item.name;
+      job.textContent = item.job;
+      info.textContent = item.text;
+  });
 }
 
 // show next person 
